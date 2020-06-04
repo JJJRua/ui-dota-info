@@ -6,7 +6,12 @@ import { Drawer, Hidden } from "@material-ui/core";
 
 const ListContent = styled.div`
   width: 240px;
+  a{
+    text-decoration:none;
+    color:inherit;
+  }
 `;
+// text-decoration, color
 
 const AppDrawer = (props) => {
   const { openMobile, setopenMobile } = useContext(DrawerContext);
@@ -22,6 +27,9 @@ const AppDrawer = (props) => {
           anchor="left"
           open={openMobile}
           onClose={handleDrawerToggle}
+          ModalProps={
+            {keepMounted:true}
+          }
         >
           <ListContent>{props.children}</ListContent>
         </Drawer>

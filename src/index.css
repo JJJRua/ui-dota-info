@@ -14,6 +14,12 @@ code {
     monospace;
 }
 
-root {
+.root {
   display: flex;
+}
+.disabled-link {
+  pointer-events: none;
+}
+.selected-link > div{
+  background: lightgrey;
 }

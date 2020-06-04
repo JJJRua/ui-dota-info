@@ -1,3 +1,5 @@
+// Code Deprecated we will use Redux as State Management and data flow between components
+
 import React, { createContext, useState } from 'react';
 
 
