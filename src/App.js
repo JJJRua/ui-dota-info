@@ -3,7 +3,6 @@ import Header from "./components/Header";
 import AppDrawer from "./components/AppDrawer";
 import DrawerOptionList from "./components/DrawerOptionList";
 import { makeStyles } from "@material-ui/core";
-import DrawerProvider from "./context/DrawerContext";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Home from "./views/Home";
 import Heroes from "./views/Heroes";
@@ -33,7 +32,7 @@ function App() {
   return (
     <Router>
       <Provider store={store}>
-        <DrawerProvider>
+        {/* <DrawerProvider> */}
           <div className="root">
             <Header title="Dota Info" />
             <nav className={classes.drawer}>
@@ -50,7 +49,7 @@ function App() {
               </Switch>
             </main>
           </div>
-        </DrawerProvider>
+        {/* </DrawerProvider> */}
       </Provider>
     </Router>
   );

@@ -1,9 +1,9 @@
-import React, { useContext } from "react";
+import React from "react";
 import PropTypes from "prop-types";
-import { DrawerContext } from "../context/DrawerContext";
 import styled from "styled-components";
 import { Drawer, Hidden } from "@material-ui/core";
-
+import { useSelector, useDispatch } from "react-redux";
+import {closeDrawerOptAction} from '../actions/ToolbarAction'
 const ListContent = styled.div`
   width: 240px;
   a{
@@ -14,9 +14,12 @@ const ListContent = styled.div`
 // text-decoration, color
 
 const AppDrawer = (props) => {
-  const { openMobile, setopenMobile } = useContext(DrawerContext);
+  // const { openMobile, setopenMobile } = useContext(DrawerContext);
+  const {open} = useSelector((state) => state.toolbar);
+  const dispatch = useDispatch();
   const handleDrawerToggle = () => {
-    setopenMobile(!openMobile);
+    // setopenMobile(!openMobile);
+    dispatch(closeDrawerOptAction());
   };
 
   return (
@@ -25,7 +28,7 @@ const AppDrawer = (props) => {
         <Drawer
           variant="temporary" 
           anchor="left"
-          open={openMobile}
+          open={open}
           onClose={handleDrawerToggle}
           ModalProps={
             {keepMounted:true}

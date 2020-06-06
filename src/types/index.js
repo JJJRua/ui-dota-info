@@ -1,5 +1,7 @@
-// Drawer Interaction
+// Toolbar Interaction
 export const OPEN_DRAWER_OPTIONS = 'OPEN_DRAWER_OPTIONS';
+export const CLOSE_DRAWER_OPTIONS = 'CLOSE_DRAWER_OPTIONS';
+export const SET_TOOLBAR_TITLE = 'SET_TOOLBAR_TITLE';
 
 // Heroes
 export const GET_HEROES_LIST = 'GET_HEROES_LIST';
@@ -9,3 +11,5 @@ export const GET_HEROES_SUCCESS = 'GET_HEROES_SUCCESS';
 
 // Teams
 export const GET_TEAMS_LIST = 'GET_TEAMS_LIST'; 
+
+

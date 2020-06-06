@@ -1,13 +1,13 @@
 import React from "react";
-import InboxIcon from "@material-ui/icons/MoveToInbox";
-import MailIcon from "@material-ui/icons/Mail";
+import StarIcon from "@material-ui/icons/Star";
+import GroupIcon from "@material-ui/icons/Group";
 import styled from "styled-components";
 import { List, ListItem, ListItemIcon, ListItemText, Divider } from "@material-ui/core";
 import {  NavLink } from "react-router-dom";
 
 const options = [
-  { icon: <InboxIcon />, label: "Heroes", navigation: "/heroes" },
-  { icon: <MailIcon />, label: "Teams", navigation: "/teams" },
+  { icon: <StarIcon />, label: "Heroes", navigation: "/heroes" },
+  { icon: <GroupIcon />, label: "Teams", navigation: "/teams" },
 ];
 
 const ImageBanner = styled.img`
