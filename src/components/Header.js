@@ -1,37 +1,37 @@
-import React from "react";
-import { string } from "prop-types";
-import { makeStyles } from "@material-ui/core/styles";
-import { IconButton, AppBar, Toolbar } from "@material-ui/core";
-import MenuIcon from "@material-ui/icons/Menu";
-import HomeIcon from "@material-ui/icons/Home";
-import {  useDispatch, useSelector } from "react-redux";
-import { openDrawerOptAction } from "../actions/ToolbarAction";
-import { NavLink } from "react-router-dom";
+import React from 'react';
+import { string } from 'prop-types';
+import { makeStyles } from '@material-ui/core/styles';
+import { IconButton, AppBar, Toolbar } from '@material-ui/core';
+import MenuIcon from '@material-ui/icons/Menu';
+import HomeIcon from '@material-ui/icons/Home';
+import {  useDispatch, useSelector } from 'react-redux';
+import { openDrawerOptAction } from '../actions/ToolbarAction';
+import { NavLink } from 'react-router-dom';
 
 const useStyles = makeStyles((theme) => ({
   menuToogleButton: {
     marginRight: theme.spacing(2),
-    [theme.breakpoints.up("md")]: {
-      display: "none",
-    },
+    [theme.breakpoints.up('md')]: {
+      display: 'none'
+    }
   },
   appBar: {
-    [theme.breakpoints.up("md")]: {
-      width: `calc(100% - 240px)`,
-      marginLeft: 240,
-    },
+    [theme.breakpoints.up('md')]: {
+      width: 'calc(100% - 240px)',
+      marginLeft: 240
+    }
   },
   toolbar: theme.mixins.toolbar,
   homeClass: {
-    marginRight: theme.spacing(2),
-  },
+    marginRight: theme.spacing(2)
+  }
 }));
 
 const Header = () => {
 
   const classes = useStyles();
   const dispatch = useDispatch();
-  const  {title} = useSelector((state)=>state.toolbar)
+  const  { title } = useSelector((state)=>state.toolbar);
 
   const openDrawer = () => {
     dispatch(openDrawerOptAction());
@@ -40,7 +40,7 @@ const Header = () => {
   return (
     <AppBar position="fixed" className={classes.appBar}>
       <Toolbar className={classes.toolbar}>
-        <NavLink to='/'>
+        <NavLink to="/">
           <IconButton>
             <HomeIcon className={classes.homeClass} />
           </IconButton>
@@ -60,7 +60,7 @@ const Header = () => {
 };
 
 Header.propTypes = {
-  title: string.isRequired,
+  title: string.isRequired
 };
 
 export default Header;

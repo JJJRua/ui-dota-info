@@ -1,25 +1,25 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React from 'react';
+import PropTypes from 'prop-types';
 import {
   Card,
   CardMedia,
   CardContent,
   Typography,
   makeStyles,
-  Box,
-} from "@material-ui/core";
+  Box
+} from '@material-ui/core';
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
   root: {
     maxWidth: 200,
-    background: "rgba(0,0,0,0.2)",
-    margin: "1rem 0",
-    padding: "0.5rem",
+    background: 'rgba(0,0,0,0.2)',
+    margin: '1rem 0',
+    padding: '0.5rem'
   },
   media: {
     height: 150,
     width: 150
-  },
+  }
 }));
 
 const TeamView = ({ team }) => {
@@ -34,10 +34,10 @@ const TeamView = ({ team }) => {
           align="center"
         />
         <CardContent>
-          <Typography align="center" variant='h5' >
+          <Typography align="center" variant="h5" >
             {team.name}
           </Typography>
-          <Typography align="center"  component='p'>
+          <Typography align="center"  component="p">
             Wins : {team.wins}
           </Typography>
           <Typography align="center"  >
@@ -51,7 +51,7 @@ const TeamView = ({ team }) => {
 };
 
 TeamView.propTypes = {
-  team: PropTypes.object.isRequired,
+  team: PropTypes.object.isRequired
 };
 
 export default TeamView;

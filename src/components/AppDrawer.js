@@ -1,9 +1,9 @@
-import React from "react";
-import PropTypes from "prop-types";
-import styled from "styled-components";
-import { Drawer, Hidden } from "@material-ui/core";
-import { useSelector, useDispatch } from "react-redux";
-import {closeDrawerOptAction} from '../actions/ToolbarAction'
+import React from 'react';
+import PropTypes from 'prop-types';
+import styled from 'styled-components';
+import { Drawer, Hidden } from '@material-ui/core';
+import { useSelector, useDispatch } from 'react-redux';
+import { closeDrawerOptAction } from '../actions/ToolbarAction';
 const ListContent = styled.div`
   width: 240px;
   a{
@@ -13,7 +13,7 @@ const ListContent = styled.div`
 `;
 
 const AppDrawer = (props) => {
-  const {open} = useSelector((state) => state.toolbar);
+  const { open } = useSelector((state) => state.toolbar);
   const dispatch = useDispatch();
   const handleDrawerToggle = () => {
     dispatch(closeDrawerOptAction());
@@ -28,7 +28,7 @@ const AppDrawer = (props) => {
           open={open}
           onClose={handleDrawerToggle}
           ModalProps={
-            {keepMounted:true}
+            { keepMounted:true }
           }
         >
           <ListContent>{props.children}</ListContent>
@@ -44,7 +44,7 @@ const AppDrawer = (props) => {
 };
 
 AppDrawer.propTypes = {
-  children: PropTypes.element.isRequired,
+  children: PropTypes.element.isRequired
 };
 
 export default AppDrawer;

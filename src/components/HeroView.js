@@ -1,9 +1,9 @@
-import React from "react";
-import PropTypes from "prop-types";
-import StrIcon from "@material-ui/icons/PanTool";
-import AgiIcon from "@material-ui/icons/Speed";
-import IntIcon from "@material-ui/icons/AcUnit";
-import styled from "styled-components";
+import React from 'react';
+import PropTypes from 'prop-types';
+import StrIcon from '@material-ui/icons/PanTool';
+import AgiIcon from '@material-ui/icons/Speed';
+import IntIcon from '@material-ui/icons/AcUnit';
+import styled from 'styled-components';
 const HeroCustom = styled.div`
   background: #b5afaf42;
   border-radius: 0.5rem;
@@ -27,11 +27,11 @@ const BeautyText = styled.p`
 
 const getIcon = (type) => {
   switch (type) {
-    case "agi":
+    case 'agi':
       return <AgiIcon />;
-    case "str":
+    case 'str':
       return <StrIcon />;
-    case "int":
+    case 'int':
     default:
       return <IntIcon />;
   }

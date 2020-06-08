@@ -2,11 +2,11 @@ import {
   GET_HEROES_LIST,
   GET_HEROES_ERROR,
   GET_HEROES_SUCCESS
-} from "../types";
+} from '../types';
 const initialState = {
   heroes: [],
   error: false,
-  loading: false,
+  loading: false
 };
 
 export default function (state = initialState, action) {

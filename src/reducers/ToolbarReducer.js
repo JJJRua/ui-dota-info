@@ -1,12 +1,12 @@
 import {
   OPEN_DRAWER_OPTIONS,
   CLOSE_DRAWER_OPTIONS,
-  SET_TOOLBAR_TITLE,
-} from "../types";
+  SET_TOOLBAR_TITLE
+} from '../types';
 
 const initialState = {
   open: false,
-  title: "",
+  title: ''
 };
 
 export default function (state = initialState, action) {
@@ -15,7 +15,7 @@ export default function (state = initialState, action) {
     case CLOSE_DRAWER_OPTIONS:
       return { ...state, open: action.payload };
     case SET_TOOLBAR_TITLE :
-      return {...state,title:action.payload}
+      return { ...state,title:action.payload };
     default:
       return state;
   }

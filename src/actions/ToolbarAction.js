@@ -1,4 +1,4 @@
-import { OPEN_DRAWER_OPTIONS, CLOSE_DRAWER_OPTIONS, SET_TOOLBAR_TITLE } from "../types";
+import { OPEN_DRAWER_OPTIONS, CLOSE_DRAWER_OPTIONS, SET_TOOLBAR_TITLE } from '../types';
 
 export function openDrawerOptAction() {
   return async (dispatch) => {
@@ -12,10 +12,10 @@ export function closeDrawerOptAction() {
   };
 }
 
-export function setToolbarTitleAction(title){
-    return async (dispatch)=>{
-        dispatch(setTitle(title));
-    }
+export function setToolbarTitleAction(title) {
+  return async (dispatch)=>{
+    dispatch(setTitle(title));
+  };
 }
 
 const openDrawer = () => ({

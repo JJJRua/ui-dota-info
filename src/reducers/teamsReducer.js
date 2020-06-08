@@ -1,13 +1,13 @@
 import {
   GET_TEAMS_LIST,
   GET_TEAMS_LIST_ERROR,
-  GET_TEAMS_LIST_SUCCESS,
-} from "../types";
+  GET_TEAMS_LIST_SUCCESS
+} from '../types';
 
 const initialState = {
   teams: [],
   error: false,
-  loading: false,
+  loading: false
 };
 
 export default function (state = initialState, action) {
