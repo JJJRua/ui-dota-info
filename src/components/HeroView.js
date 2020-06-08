@@ -10,19 +10,19 @@ const HeroCustom = styled.div`
   text-align: center;
   box-sizing: border-box;
   margin: 1rem;
-  word-break:break-word;
-  padding:0.5rem;
+  word-break: break-word;
+  padding: 0.5rem;
   width: 12rem;
   height: 12rem;
   position: relative;
 `;
 
 const BeautyText = styled.p`
-position:absolute;
-width:100%;
-bottom:0;
-font-weight:500;
-font-style:italic;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  font-weight: 500;
+  font-style: italic;
 `;
 
 const getIcon = (type) => {
@@ -50,6 +50,8 @@ const HeroView = ({ hero }) => {
   );
 };
 
-HeroView.propTypes = {};
+HeroView.propTypes = {
+  hero: PropTypes.object.isRequired
+};
 
 export default HeroView;

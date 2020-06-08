@@ -6,10 +6,10 @@ import { setToolbarTitleAction } from "../actions/ToolbarAction";
 import HeroView from "../components/HeroView";
 import { Box } from "@material-ui/core";
 
-const Heroes = ({history}) => {
+const Heroes = ({ history }) => {
   const dispatch = useDispatch();
   useEffect(() => {
-    dispatch(setToolbarTitleAction('Heroes'));
+    dispatch(setToolbarTitleAction("Heroes"));
     const getHeroes = () => dispatch(getHeroesAction());
     getHeroes();
     // eslint-disable-next-line
@@ -18,16 +18,15 @@ const Heroes = ({history}) => {
   const { heroes, error, loading } = useSelector((state) => state.heroes);
 
   return (
-    <>
+    <Box display="flex" flexWrap="wrap" justifyContent="center">
       {loading ? <Loading /> : null}
       {/* // TODO Create an Error component for all app*/}
       {error ? <h2>Error</h2> : null}
-      <Box display="flex" flexWrap='wrap' justifyContent='center'>
-        {heroes
-          ? heroes.map((heroe) => <HeroView key={heroe.id} hero={heroe} />)
-          : null}
-      </Box>
-    </>
+
+      {heroes
+        ? heroes.map((heroe) => <HeroView key={heroe.id} hero={heroe} />)
+        : null}
+    </Box>
   );
 };
 

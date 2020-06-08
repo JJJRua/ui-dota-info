@@ -11,14 +11,11 @@ const ListContent = styled.div`
     color:inherit;
   }
 `;
-// text-decoration, color
 
 const AppDrawer = (props) => {
-  // const { openMobile, setopenMobile } = useContext(DrawerContext);
   const {open} = useSelector((state) => state.toolbar);
   const dispatch = useDispatch();
   const handleDrawerToggle = () => {
-    // setopenMobile(!openMobile);
     dispatch(closeDrawerOptAction());
   };
 

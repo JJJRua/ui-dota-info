@@ -1,18 +1,27 @@
 import React, { useEffect } from "react";
-import PropTypes from "prop-types";
 import { setToolbarTitleAction } from "../actions/ToolbarAction";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { getTeamListAction } from "../actions/TeamsAction";
+import { Box } from "@material-ui/core";
+import Loading from "../components/Loading";
+import TeamView from "../components/TeamView";
 
 const Teams = (props) => {
   const dispatch = useDispatch();
+
   useEffect(() => {
     dispatch(setToolbarTitleAction("Teams"));
+    const getTeams = () => dispatch(getTeamListAction());
+    getTeams();
     // eslint-disable-next-line
   }, []);
-
-  return <div>TEAMS</div>;
+  const {loading,teams} = useSelector((state) => state.teams);
+  return (
+    <Box display="flex" flexWrap="wrap" justifyContent='space-between' alignItems='center'>
+      {loading ? <Loading /> : null}
+      {teams ? teams.map((team)=> <TeamView  key={team.id}  team={team} />) : null}
+    </Box>
+  );
 };
-
-Teams.propTypes = {};
 
 export default Teams;

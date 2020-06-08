@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import PropTypes from "prop-types";
 import DoneIcon from "@material-ui/icons/Done";
 import InProgressIcon from "@material-ui/icons/Autorenew";
 import PendingIcon from "@material-ui/icons/Assignment";
@@ -34,7 +33,7 @@ const Legend = styled.p`
     vertical-align: super;
   }
 `;
-const Home = (props) => {
+const Home = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -73,6 +72,5 @@ const Home = (props) => {
   );
 };
 
-Home.propTypes = {};
 
 export default Home;
